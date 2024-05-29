@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// AppView is the root widget of the application.
 class AppView extends StatelessWidget {
   const AppView({super.key});
 
