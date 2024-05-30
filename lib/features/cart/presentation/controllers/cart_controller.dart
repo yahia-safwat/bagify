@@ -1,63 +1,69 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../../application/cart_service.dart';
 import '../../domain/models/cart_item_model.dart';
 import 'cart_states.dart';
 
-class CartController extends StateNotifier<AsyncValue<List<CartItem>>> {
+class CartController extends StateNotifier<CartState> {
   final CartService _cartService;
-  final StateController<CartState> cartState;
 
-  CartController(this._cartService, this.cartState)
-      : super(const AsyncValue.loading()) {
+  CartController(this._cartService) : super(CartIdleState()) {
     _loadCartItems();
   }
 
   Future<void> _loadCartItems() async {
     try {
       final items = await _cartService.getCartItems();
-      state = AsyncValue.data(items);
+      state = CartLoadSuccessState(items);
     } catch (e) {
-      state = AsyncValue.error(e, StackTrace.current);
+      state = CartLoadErrorState(e.toString());
     }
   }
 
   Future<void> addItemToCart(CartItem item) async {
-    cartState.state = CartStateProcessing();
+    state = CartLoadingState();
     try {
       await _cartService.addItemToCart(item);
-      await _loadCartItems();
-      cartState.state = CartStateItemAdded(item.id);
+      state = CartItemAddedState(item.id);
+      state = CartLoadSuccessState(await _cartService.getCartItems());
     } catch (e) {
-      cartState.state = CartStateError(e.toString());
-      state = AsyncValue.error(e, StackTrace.current);
+      state = CartLoadErrorState(e.toString());
     }
   }
 
   Future<void> removeItemFromCart(int id) async {
+    state = CartLoadingState();
     try {
       await _cartService.removeItemFromCart(id);
-      await _loadCartItems();
+      state = CartItemRemovedState(id);
+      state = CartLoadSuccessState(await _cartService.getCartItems());
     } catch (e) {
-      state = AsyncValue.error(e, StackTrace.current);
+      state = CartLoadErrorState(e.toString());
     }
   }
 
   Future<void> updateItemQuantity(int id, int quantity) async {
+    state = CartLoadingState();
     try {
       await _cartService.updateItemQuantity(id, quantity);
-      await _loadCartItems();
+      state = CartItemUpdatedState(id);
+      state = CartLoadSuccessState(await _cartService.getCartItems());
     } catch (e) {
-      state = AsyncValue.error(e, StackTrace.current);
+      state = CartLoadErrorState(e.toString());
     }
   }
 
   Future<void> clearCart() async {
+    state = CartLoadingState();
     try {
       await _cartService.clearCart();
-      await _loadCartItems();
+      state = CartClearedState();
+      state = CartLoadSuccessState(await _cartService.getCartItems());
     } catch (e) {
-      state = AsyncValue.error(e, StackTrace.current);
+      state = CartLoadErrorState(e.toString());
     }
+  }
+
+  void resetState() {
+    state = CartIdleState();
   }
 }

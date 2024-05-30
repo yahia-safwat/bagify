@@ -1,31 +1,40 @@
-class CartState {}
+import '../../domain/models/cart_item_model.dart';
 
-class CartStateIdle extends CartState {}
+sealed class CartState {}
 
-class CartStateProcessing extends CartState {}
+class CartIdleState extends CartState {}
 
-class CartStateItemAdded extends CartState {
-  final int itemId;
+class CartLoadingState extends CartState {}
 
-  CartStateItemAdded(this.itemId);
+class CartLoadSuccessState extends CartState {
+  final List<CartItem> cartItems;
+
+  CartLoadSuccessState(this.cartItems);
 }
 
-class CartStateItemRemoved extends CartState {
-  final int itemId;
-
-  CartStateItemRemoved(this.itemId);
-}
-
-class CartStateItemUpdated extends CartState {
-  final int itemId;
-
-  CartStateItemUpdated(this.itemId);
-}
-
-class CartStateCartCleared extends CartState {}
-
-class CartStateError extends CartState {
+class CartLoadErrorState extends CartState {
   final String message;
 
-  CartStateError(this.message);
+  CartLoadErrorState(this.message);
 }
+
+// !-- more states
+class CartItemAddedState extends CartState {
+  final int itemId;
+
+  CartItemAddedState(this.itemId);
+}
+
+class CartItemRemovedState extends CartState {
+  final int itemId;
+
+  CartItemRemovedState(this.itemId);
+}
+
+class CartItemUpdatedState extends CartState {
+  final int itemId;
+
+  CartItemUpdatedState(this.itemId);
+}
+
+class CartClearedState extends CartState {}
