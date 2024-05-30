@@ -40,7 +40,7 @@ class BottomNav extends ConsumerWidget {
         context.go(AppRoutes.wishlist);
         break;
       case 2:
-        // context.go(AppRoutes.cart);
+        context.go(AppRoutes.cart);
         break;
     }
   }
