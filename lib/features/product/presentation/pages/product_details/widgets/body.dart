@@ -16,17 +16,15 @@ class ProductDetailsPageBody extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     ref.listen<CartState>(cartControllerProvider, (previous, next) {
-      if (next is CartItemAddedState) {
-        // Navigate to the cart page when the item is successfully added
-        context.pushNamed(AppRoutes.cart);
+      next.whenOrNull(
+        itemAdded: (itemId) {
+          // Navigate to the cart page when the item is successfully added
+          context.pushNamed(AppRoutes.cart);
 
-        // Reset the state to idle after navigation
-        ref.read(cartControllerProvider.notifier).resetState();
-      } else if (next is CartLoadErrorState) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(next.message)),
-        );
-      }
+          // Reset the state to idle after navigation
+          ref.read(cartControllerProvider.notifier).resetState();
+        },
+      );
     });
 
     return SingleChildScrollView(

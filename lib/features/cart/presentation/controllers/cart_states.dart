@@ -1,40 +1,17 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../domain/models/cart_item_model.dart';
 
-sealed class CartState {}
+part 'cart_states.freezed.dart';
 
-class CartIdleState extends CartState {}
-
-class CartLoadingState extends CartState {}
-
-class CartLoadSuccessState extends CartState {
-  final List<CartItem> cartItems;
-
-  CartLoadSuccessState(this.cartItems);
+@freezed
+class CartState with _$CartState {
+  const factory CartState.idle() = CartIdleState;
+  const factory CartState.loading() = CartLoadingState;
+  const factory CartState.loadSuccess(List<CartItem> cartItems) =
+      CartLoadSuccessState;
+  const factory CartState.loadError(String message) = CartLoadErrorState;
+  const factory CartState.itemAdded(int itemId) = CartItemAddedState;
+  const factory CartState.itemRemoved(int itemId) = CartItemRemovedState;
+  const factory CartState.itemUpdated(int itemId) = CartItemUpdatedState;
+  const factory CartState.cartCleared() = CartClearedState;
 }
-
-class CartLoadErrorState extends CartState {
-  final String message;
-
-  CartLoadErrorState(this.message);
-}
-
-// !-- more states
-class CartItemAddedState extends CartState {
-  final int itemId;
-
-  CartItemAddedState(this.itemId);
-}
-
-class CartItemRemovedState extends CartState {
-  final int itemId;
-
-  CartItemRemovedState(this.itemId);
-}
-
-class CartItemUpdatedState extends CartState {
-  final int itemId;
-
-  CartItemUpdatedState(this.itemId);
-}
-
-class CartClearedState extends CartState {}

@@ -1,4 +1,3 @@
-import 'package:bagify/features/cart/presentation/controllers/cart_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -12,18 +11,17 @@ class CartPageBody extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final cartState = ref.watch(cartControllerProvider);
 
-    if (cartState is CartLoadSuccessState) {
-      final cartItems = cartState.cartItems;
-      if (cartItems.isNotEmpty) {
-        return _buildCartItems(cartItems, ref);
-      } else {
-        return const Center(child: Text('Your cart is empty'));
-      }
-    } else if (cartState is CartLoadErrorState) {
-      return Center(child: Text(cartState.message));
-    } else {
-      return const Center(child: CircularProgressIndicator());
-    }
+    return cartState.maybeWhen(
+      orElse: () => const Center(child: CircularProgressIndicator()),
+      loadError: (message) => Center(child: Text(message)),
+      loadSuccess: (cartItems) {
+        if (cartItems.isNotEmpty) {
+          return _buildCartItems(cartItems, ref);
+        } else {
+          return const Center(child: Text('Your cart is empty'));
+        }
+      },
+    );
   }
 }
 
