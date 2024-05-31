@@ -10,7 +10,8 @@ class WishlistPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final wishlist = ref.watch(wishlistProvider);
+    // Get the wishlist & Ensure no duplicates
+    final wishlist = ref.watch(wishlistProvider).toSet().toList();
 
     return Scaffold(
       appBar: AppBar(

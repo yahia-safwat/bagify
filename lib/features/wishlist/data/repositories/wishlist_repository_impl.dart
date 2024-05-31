@@ -6,7 +6,12 @@ class WishlistRepositoryImpl implements WishlistRepository {
 
   @override
   void addProduct(ProductModel product) {
-    _wishlist.add(product);
+    // Check if the product is already in the wishlist
+    final isAlreadyInWishlist = _wishlist.any((item) => item.id == product.id);
+
+    if (!isAlreadyInWishlist) {
+      _wishlist.add(product);
+    }
   }
 
   @override

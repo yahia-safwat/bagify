@@ -4,10 +4,7 @@ import '../../../../product/domain/models/product_model.dart';
 import '../../../../product/presentation/widgets/product_list_item.dart';
 
 class WishlistPageBody extends StatelessWidget {
-  const WishlistPageBody({
-    super.key,
-    required this.wishlist,
-  });
+  const WishlistPageBody({super.key, required this.wishlist});
 
   final List<ProductModel> wishlist;
 
