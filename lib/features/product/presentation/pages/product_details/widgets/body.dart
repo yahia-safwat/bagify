@@ -22,7 +22,7 @@ class ProductDetailsPageBody extends ConsumerWidget {
           context.pushNamed(AppRoutes.cart);
 
           // Reset the state to idle after navigation
-          ref.read(cartControllerProvider.notifier).resetState();
+          // ref.read(cartControllerProvider.notifier).resetState();
         },
       );
     });

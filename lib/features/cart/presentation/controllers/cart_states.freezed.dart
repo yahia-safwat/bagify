@@ -18,75 +18,123 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$CartState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() idle,
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<CartItem> cartItems) loadSuccess,
     required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
     required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
     required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
     required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
     required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? idle,
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<CartItem> cartItems)? loadSuccess,
     TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
     TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
     TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
     TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
     TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? idle,
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<CartItem> cartItems)? loadSuccess,
     TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
     TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
     TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
     TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
     TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CartIdleState value) idle,
+    required TResult Function(CartIdleState value) initial,
     required TResult Function(CartLoadingState value) loading,
     required TResult Function(CartLoadSuccessState value) loadSuccess,
     required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
     required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
     required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
     required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
     required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CartIdleState value)? idle,
+    TResult? Function(CartIdleState value)? initial,
     TResult? Function(CartLoadingState value)? loading,
     TResult? Function(CartLoadSuccessState value)? loadSuccess,
     TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
     TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
     TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
     TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
     TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CartIdleState value)? idle,
+    TResult Function(CartIdleState value)? initial,
     TResult Function(CartLoadingState value)? loading,
     TResult Function(CartLoadSuccessState value)? loadSuccess,
     TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
     TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
     TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
     TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
     TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -132,7 +180,7 @@ class _$CartIdleStateImpl implements CartIdleState {
 
   @override
   String toString() {
-    return 'CartState.idle()';
+    return 'CartState.initial()';
   }
 
   @override
@@ -147,48 +195,72 @@ class _$CartIdleStateImpl implements CartIdleState {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() idle,
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<CartItem> cartItems) loadSuccess,
     required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
     required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
     required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
     required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
     required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
   }) {
-    return idle();
+    return initial();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? idle,
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<CartItem> cartItems)? loadSuccess,
     TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
     TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
     TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
     TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
     TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
   }) {
-    return idle?.call();
+    return initial?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? idle,
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<CartItem> cartItems)? loadSuccess,
     TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
     TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
     TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
     TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
     TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
     required TResult orElse(),
   }) {
-    if (idle != null) {
-      return idle();
+    if (initial != null) {
+      return initial();
     }
     return orElse();
   }
@@ -196,48 +268,72 @@ class _$CartIdleStateImpl implements CartIdleState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CartIdleState value) idle,
+    required TResult Function(CartIdleState value) initial,
     required TResult Function(CartLoadingState value) loading,
     required TResult Function(CartLoadSuccessState value) loadSuccess,
     required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
     required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
     required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
     required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
     required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
   }) {
-    return idle(this);
+    return initial(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CartIdleState value)? idle,
+    TResult? Function(CartIdleState value)? initial,
     TResult? Function(CartLoadingState value)? loading,
     TResult? Function(CartLoadSuccessState value)? loadSuccess,
     TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
     TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
     TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
     TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
     TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
   }) {
-    return idle?.call(this);
+    return initial?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CartIdleState value)? idle,
+    TResult Function(CartIdleState value)? initial,
     TResult Function(CartLoadingState value)? loading,
     TResult Function(CartLoadSuccessState value)? loadSuccess,
     TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
     TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
     TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
     TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
     TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
     required TResult orElse(),
   }) {
-    if (idle != null) {
-      return idle(this);
+    if (initial != null) {
+      return initial(this);
     }
     return orElse();
   }
@@ -285,14 +381,22 @@ class _$CartLoadingStateImpl implements CartLoadingState {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() idle,
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<CartItem> cartItems) loadSuccess,
     required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
     required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
     required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
     required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
     required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
   }) {
     return loading();
   }
@@ -300,14 +404,22 @@ class _$CartLoadingStateImpl implements CartLoadingState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? idle,
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<CartItem> cartItems)? loadSuccess,
     TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
     TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
     TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
     TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
     TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
   }) {
     return loading?.call();
   }
@@ -315,14 +427,22 @@ class _$CartLoadingStateImpl implements CartLoadingState {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? idle,
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<CartItem> cartItems)? loadSuccess,
     TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
     TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
     TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
     TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
     TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -334,14 +454,22 @@ class _$CartLoadingStateImpl implements CartLoadingState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CartIdleState value) idle,
+    required TResult Function(CartIdleState value) initial,
     required TResult Function(CartLoadingState value) loading,
     required TResult Function(CartLoadSuccessState value) loadSuccess,
     required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
     required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
     required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
     required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
     required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
   }) {
     return loading(this);
   }
@@ -349,14 +477,22 @@ class _$CartLoadingStateImpl implements CartLoadingState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CartIdleState value)? idle,
+    TResult? Function(CartIdleState value)? initial,
     TResult? Function(CartLoadingState value)? loading,
     TResult? Function(CartLoadSuccessState value)? loadSuccess,
     TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
     TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
     TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
     TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
     TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
   }) {
     return loading?.call(this);
   }
@@ -364,14 +500,22 @@ class _$CartLoadingStateImpl implements CartLoadingState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CartIdleState value)? idle,
+    TResult Function(CartIdleState value)? initial,
     TResult Function(CartLoadingState value)? loading,
     TResult Function(CartLoadSuccessState value)? loadSuccess,
     TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
     TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
     TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
     TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
     TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -459,14 +603,22 @@ class _$CartLoadSuccessStateImpl implements CartLoadSuccessState {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() idle,
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<CartItem> cartItems) loadSuccess,
     required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
     required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
     required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
     required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
     required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
   }) {
     return loadSuccess(cartItems);
   }
@@ -474,14 +626,22 @@ class _$CartLoadSuccessStateImpl implements CartLoadSuccessState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? idle,
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<CartItem> cartItems)? loadSuccess,
     TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
     TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
     TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
     TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
     TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
   }) {
     return loadSuccess?.call(cartItems);
   }
@@ -489,14 +649,22 @@ class _$CartLoadSuccessStateImpl implements CartLoadSuccessState {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? idle,
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<CartItem> cartItems)? loadSuccess,
     TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
     TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
     TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
     TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
     TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
     required TResult orElse(),
   }) {
     if (loadSuccess != null) {
@@ -508,14 +676,22 @@ class _$CartLoadSuccessStateImpl implements CartLoadSuccessState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CartIdleState value) idle,
+    required TResult Function(CartIdleState value) initial,
     required TResult Function(CartLoadingState value) loading,
     required TResult Function(CartLoadSuccessState value) loadSuccess,
     required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
     required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
     required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
     required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
     required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
   }) {
     return loadSuccess(this);
   }
@@ -523,14 +699,22 @@ class _$CartLoadSuccessStateImpl implements CartLoadSuccessState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CartIdleState value)? idle,
+    TResult? Function(CartIdleState value)? initial,
     TResult? Function(CartLoadingState value)? loading,
     TResult? Function(CartLoadSuccessState value)? loadSuccess,
     TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
     TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
     TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
     TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
     TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
   }) {
     return loadSuccess?.call(this);
   }
@@ -538,14 +722,22 @@ class _$CartLoadSuccessStateImpl implements CartLoadSuccessState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CartIdleState value)? idle,
+    TResult Function(CartIdleState value)? initial,
     TResult Function(CartLoadingState value)? loading,
     TResult Function(CartLoadSuccessState value)? loadSuccess,
     TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
     TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
     TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
     TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
     TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
     required TResult orElse(),
   }) {
     if (loadSuccess != null) {
@@ -630,14 +822,22 @@ class _$CartLoadErrorStateImpl implements CartLoadErrorState {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() idle,
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<CartItem> cartItems) loadSuccess,
     required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
     required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
     required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
     required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
     required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
   }) {
     return loadError(message);
   }
@@ -645,14 +845,22 @@ class _$CartLoadErrorStateImpl implements CartLoadErrorState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? idle,
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<CartItem> cartItems)? loadSuccess,
     TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
     TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
     TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
     TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
     TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
   }) {
     return loadError?.call(message);
   }
@@ -660,14 +868,22 @@ class _$CartLoadErrorStateImpl implements CartLoadErrorState {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? idle,
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<CartItem> cartItems)? loadSuccess,
     TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
     TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
     TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
     TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
     TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
     required TResult orElse(),
   }) {
     if (loadError != null) {
@@ -679,14 +895,22 @@ class _$CartLoadErrorStateImpl implements CartLoadErrorState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CartIdleState value) idle,
+    required TResult Function(CartIdleState value) initial,
     required TResult Function(CartLoadingState value) loading,
     required TResult Function(CartLoadSuccessState value) loadSuccess,
     required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
     required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
     required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
     required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
     required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
   }) {
     return loadError(this);
   }
@@ -694,14 +918,22 @@ class _$CartLoadErrorStateImpl implements CartLoadErrorState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CartIdleState value)? idle,
+    TResult? Function(CartIdleState value)? initial,
     TResult? Function(CartLoadingState value)? loading,
     TResult? Function(CartLoadSuccessState value)? loadSuccess,
     TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
     TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
     TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
     TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
     TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
   }) {
     return loadError?.call(this);
   }
@@ -709,14 +941,22 @@ class _$CartLoadErrorStateImpl implements CartLoadErrorState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CartIdleState value)? idle,
+    TResult Function(CartIdleState value)? initial,
     TResult Function(CartLoadingState value)? loading,
     TResult Function(CartLoadSuccessState value)? loadSuccess,
     TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
     TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
     TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
     TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
     TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
     required TResult orElse(),
   }) {
     if (loadError != null) {
@@ -734,6 +974,193 @@ abstract class CartLoadErrorState implements CartState {
   @JsonKey(ignore: true)
   _$$CartLoadErrorStateImplCopyWith<_$CartLoadErrorStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CartAddingItemStateImplCopyWith<$Res> {
+  factory _$$CartAddingItemStateImplCopyWith(_$CartAddingItemStateImpl value,
+          $Res Function(_$CartAddingItemStateImpl) then) =
+      __$$CartAddingItemStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CartAddingItemStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartAddingItemStateImpl>
+    implements _$$CartAddingItemStateImplCopyWith<$Res> {
+  __$$CartAddingItemStateImplCopyWithImpl(_$CartAddingItemStateImpl _value,
+      $Res Function(_$CartAddingItemStateImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CartAddingItemStateImpl implements CartAddingItemState {
+  const _$CartAddingItemStateImpl();
+
+  @override
+  String toString() {
+    return 'CartState.addingItem()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CartAddingItemStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<CartItem> cartItems) loadSuccess,
+    required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
+    required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
+    required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
+    required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
+    required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
+  }) {
+    return addingItem();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<CartItem> cartItems)? loadSuccess,
+    TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
+    TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
+    TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
+    TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
+    TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
+  }) {
+    return addingItem?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<CartItem> cartItems)? loadSuccess,
+    TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
+    TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
+    TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
+    TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
+    TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (addingItem != null) {
+      return addingItem();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CartIdleState value) initial,
+    required TResult Function(CartLoadingState value) loading,
+    required TResult Function(CartLoadSuccessState value) loadSuccess,
+    required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
+    required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
+    required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
+    required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
+    required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
+  }) {
+    return addingItem(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CartIdleState value)? initial,
+    TResult? Function(CartLoadingState value)? loading,
+    TResult? Function(CartLoadSuccessState value)? loadSuccess,
+    TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
+    TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
+    TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
+    TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
+    TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
+  }) {
+    return addingItem?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CartIdleState value)? initial,
+    TResult Function(CartLoadingState value)? loading,
+    TResult Function(CartLoadSuccessState value)? loadSuccess,
+    TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
+    TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
+    TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
+    TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
+    TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (addingItem != null) {
+      return addingItem(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CartAddingItemState implements CartState {
+  const factory CartAddingItemState() = _$CartAddingItemStateImpl;
 }
 
 /// @nodoc
@@ -801,14 +1228,22 @@ class _$CartItemAddedStateImpl implements CartItemAddedState {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() idle,
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<CartItem> cartItems) loadSuccess,
     required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
     required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
     required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
     required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
     required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
   }) {
     return itemAdded(itemId);
   }
@@ -816,14 +1251,22 @@ class _$CartItemAddedStateImpl implements CartItemAddedState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? idle,
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<CartItem> cartItems)? loadSuccess,
     TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
     TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
     TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
     TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
     TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
   }) {
     return itemAdded?.call(itemId);
   }
@@ -831,14 +1274,22 @@ class _$CartItemAddedStateImpl implements CartItemAddedState {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? idle,
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<CartItem> cartItems)? loadSuccess,
     TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
     TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
     TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
     TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
     TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
     required TResult orElse(),
   }) {
     if (itemAdded != null) {
@@ -850,14 +1301,22 @@ class _$CartItemAddedStateImpl implements CartItemAddedState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CartIdleState value) idle,
+    required TResult Function(CartIdleState value) initial,
     required TResult Function(CartLoadingState value) loading,
     required TResult Function(CartLoadSuccessState value) loadSuccess,
     required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
     required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
     required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
     required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
     required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
   }) {
     return itemAdded(this);
   }
@@ -865,14 +1324,22 @@ class _$CartItemAddedStateImpl implements CartItemAddedState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CartIdleState value)? idle,
+    TResult? Function(CartIdleState value)? initial,
     TResult? Function(CartLoadingState value)? loading,
     TResult? Function(CartLoadSuccessState value)? loadSuccess,
     TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
     TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
     TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
     TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
     TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
   }) {
     return itemAdded?.call(this);
   }
@@ -880,14 +1347,22 @@ class _$CartItemAddedStateImpl implements CartItemAddedState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CartIdleState value)? idle,
+    TResult Function(CartIdleState value)? initial,
     TResult Function(CartLoadingState value)? loading,
     TResult Function(CartLoadSuccessState value)? loadSuccess,
     TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
     TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
     TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
     TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
     TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
     required TResult orElse(),
   }) {
     if (itemAdded != null) {
@@ -904,6 +1379,414 @@ abstract class CartItemAddedState implements CartState {
   @JsonKey(ignore: true)
   _$$CartItemAddedStateImplCopyWith<_$CartItemAddedStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CartItemAddErrorStateImplCopyWith<$Res> {
+  factory _$$CartItemAddErrorStateImplCopyWith(
+          _$CartItemAddErrorStateImpl value,
+          $Res Function(_$CartItemAddErrorStateImpl) then) =
+      __$$CartItemAddErrorStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$CartItemAddErrorStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartItemAddErrorStateImpl>
+    implements _$$CartItemAddErrorStateImplCopyWith<$Res> {
+  __$$CartItemAddErrorStateImplCopyWithImpl(_$CartItemAddErrorStateImpl _value,
+      $Res Function(_$CartItemAddErrorStateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$CartItemAddErrorStateImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CartItemAddErrorStateImpl implements CartItemAddErrorState {
+  const _$CartItemAddErrorStateImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CartState.itemAddError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CartItemAddErrorStateImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CartItemAddErrorStateImplCopyWith<_$CartItemAddErrorStateImpl>
+      get copyWith => __$$CartItemAddErrorStateImplCopyWithImpl<
+          _$CartItemAddErrorStateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<CartItem> cartItems) loadSuccess,
+    required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
+    required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
+    required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
+    required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
+    required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
+  }) {
+    return itemAddError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<CartItem> cartItems)? loadSuccess,
+    TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
+    TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
+    TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
+    TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
+    TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
+  }) {
+    return itemAddError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<CartItem> cartItems)? loadSuccess,
+    TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
+    TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
+    TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
+    TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
+    TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (itemAddError != null) {
+      return itemAddError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CartIdleState value) initial,
+    required TResult Function(CartLoadingState value) loading,
+    required TResult Function(CartLoadSuccessState value) loadSuccess,
+    required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
+    required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
+    required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
+    required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
+    required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
+  }) {
+    return itemAddError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CartIdleState value)? initial,
+    TResult? Function(CartLoadingState value)? loading,
+    TResult? Function(CartLoadSuccessState value)? loadSuccess,
+    TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
+    TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
+    TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
+    TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
+    TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
+  }) {
+    return itemAddError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CartIdleState value)? initial,
+    TResult Function(CartLoadingState value)? loading,
+    TResult Function(CartLoadSuccessState value)? loadSuccess,
+    TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
+    TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
+    TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
+    TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
+    TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (itemAddError != null) {
+      return itemAddError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CartItemAddErrorState implements CartState {
+  const factory CartItemAddErrorState(final String message) =
+      _$CartItemAddErrorStateImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$CartItemAddErrorStateImplCopyWith<_$CartItemAddErrorStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CartRemovingItemStateImplCopyWith<$Res> {
+  factory _$$CartRemovingItemStateImplCopyWith(
+          _$CartRemovingItemStateImpl value,
+          $Res Function(_$CartRemovingItemStateImpl) then) =
+      __$$CartRemovingItemStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CartRemovingItemStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartRemovingItemStateImpl>
+    implements _$$CartRemovingItemStateImplCopyWith<$Res> {
+  __$$CartRemovingItemStateImplCopyWithImpl(_$CartRemovingItemStateImpl _value,
+      $Res Function(_$CartRemovingItemStateImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CartRemovingItemStateImpl implements CartRemovingItemState {
+  const _$CartRemovingItemStateImpl();
+
+  @override
+  String toString() {
+    return 'CartState.removingItem()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CartRemovingItemStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<CartItem> cartItems) loadSuccess,
+    required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
+    required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
+    required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
+    required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
+    required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
+  }) {
+    return removingItem();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<CartItem> cartItems)? loadSuccess,
+    TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
+    TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
+    TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
+    TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
+    TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
+  }) {
+    return removingItem?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<CartItem> cartItems)? loadSuccess,
+    TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
+    TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
+    TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
+    TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
+    TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (removingItem != null) {
+      return removingItem();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CartIdleState value) initial,
+    required TResult Function(CartLoadingState value) loading,
+    required TResult Function(CartLoadSuccessState value) loadSuccess,
+    required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
+    required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
+    required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
+    required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
+    required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
+  }) {
+    return removingItem(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CartIdleState value)? initial,
+    TResult? Function(CartLoadingState value)? loading,
+    TResult? Function(CartLoadSuccessState value)? loadSuccess,
+    TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
+    TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
+    TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
+    TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
+    TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
+  }) {
+    return removingItem?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CartIdleState value)? initial,
+    TResult Function(CartLoadingState value)? loading,
+    TResult Function(CartLoadSuccessState value)? loadSuccess,
+    TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
+    TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
+    TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
+    TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
+    TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (removingItem != null) {
+      return removingItem(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CartRemovingItemState implements CartState {
+  const factory CartRemovingItemState() = _$CartRemovingItemStateImpl;
 }
 
 /// @nodoc
@@ -972,14 +1855,22 @@ class _$CartItemRemovedStateImpl implements CartItemRemovedState {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() idle,
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<CartItem> cartItems) loadSuccess,
     required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
     required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
     required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
     required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
     required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
   }) {
     return itemRemoved(itemId);
   }
@@ -987,14 +1878,22 @@ class _$CartItemRemovedStateImpl implements CartItemRemovedState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? idle,
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<CartItem> cartItems)? loadSuccess,
     TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
     TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
     TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
     TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
     TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
   }) {
     return itemRemoved?.call(itemId);
   }
@@ -1002,14 +1901,22 @@ class _$CartItemRemovedStateImpl implements CartItemRemovedState {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? idle,
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<CartItem> cartItems)? loadSuccess,
     TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
     TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
     TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
     TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
     TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
     required TResult orElse(),
   }) {
     if (itemRemoved != null) {
@@ -1021,14 +1928,22 @@ class _$CartItemRemovedStateImpl implements CartItemRemovedState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CartIdleState value) idle,
+    required TResult Function(CartIdleState value) initial,
     required TResult Function(CartLoadingState value) loading,
     required TResult Function(CartLoadSuccessState value) loadSuccess,
     required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
     required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
     required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
     required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
     required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
   }) {
     return itemRemoved(this);
   }
@@ -1036,14 +1951,22 @@ class _$CartItemRemovedStateImpl implements CartItemRemovedState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CartIdleState value)? idle,
+    TResult? Function(CartIdleState value)? initial,
     TResult? Function(CartLoadingState value)? loading,
     TResult? Function(CartLoadSuccessState value)? loadSuccess,
     TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
     TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
     TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
     TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
     TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
   }) {
     return itemRemoved?.call(this);
   }
@@ -1051,14 +1974,22 @@ class _$CartItemRemovedStateImpl implements CartItemRemovedState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CartIdleState value)? idle,
+    TResult Function(CartIdleState value)? initial,
     TResult Function(CartLoadingState value)? loading,
     TResult Function(CartLoadSuccessState value)? loadSuccess,
     TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
     TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
     TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
     TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
     TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
     required TResult orElse(),
   }) {
     if (itemRemoved != null) {
@@ -1076,6 +2007,415 @@ abstract class CartItemRemovedState implements CartState {
   @JsonKey(ignore: true)
   _$$CartItemRemovedStateImplCopyWith<_$CartItemRemovedStateImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CartItemRemoveErrorStateImplCopyWith<$Res> {
+  factory _$$CartItemRemoveErrorStateImplCopyWith(
+          _$CartItemRemoveErrorStateImpl value,
+          $Res Function(_$CartItemRemoveErrorStateImpl) then) =
+      __$$CartItemRemoveErrorStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$CartItemRemoveErrorStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartItemRemoveErrorStateImpl>
+    implements _$$CartItemRemoveErrorStateImplCopyWith<$Res> {
+  __$$CartItemRemoveErrorStateImplCopyWithImpl(
+      _$CartItemRemoveErrorStateImpl _value,
+      $Res Function(_$CartItemRemoveErrorStateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$CartItemRemoveErrorStateImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CartItemRemoveErrorStateImpl implements CartItemRemoveErrorState {
+  const _$CartItemRemoveErrorStateImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CartState.itemRemoveError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CartItemRemoveErrorStateImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CartItemRemoveErrorStateImplCopyWith<_$CartItemRemoveErrorStateImpl>
+      get copyWith => __$$CartItemRemoveErrorStateImplCopyWithImpl<
+          _$CartItemRemoveErrorStateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<CartItem> cartItems) loadSuccess,
+    required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
+    required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
+    required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
+    required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
+    required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
+  }) {
+    return itemRemoveError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<CartItem> cartItems)? loadSuccess,
+    TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
+    TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
+    TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
+    TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
+    TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
+  }) {
+    return itemRemoveError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<CartItem> cartItems)? loadSuccess,
+    TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
+    TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
+    TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
+    TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
+    TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (itemRemoveError != null) {
+      return itemRemoveError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CartIdleState value) initial,
+    required TResult Function(CartLoadingState value) loading,
+    required TResult Function(CartLoadSuccessState value) loadSuccess,
+    required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
+    required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
+    required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
+    required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
+    required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
+  }) {
+    return itemRemoveError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CartIdleState value)? initial,
+    TResult? Function(CartLoadingState value)? loading,
+    TResult? Function(CartLoadSuccessState value)? loadSuccess,
+    TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
+    TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
+    TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
+    TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
+    TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
+  }) {
+    return itemRemoveError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CartIdleState value)? initial,
+    TResult Function(CartLoadingState value)? loading,
+    TResult Function(CartLoadSuccessState value)? loadSuccess,
+    TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
+    TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
+    TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
+    TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
+    TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (itemRemoveError != null) {
+      return itemRemoveError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CartItemRemoveErrorState implements CartState {
+  const factory CartItemRemoveErrorState(final String message) =
+      _$CartItemRemoveErrorStateImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$CartItemRemoveErrorStateImplCopyWith<_$CartItemRemoveErrorStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CartUpdatingItemStateImplCopyWith<$Res> {
+  factory _$$CartUpdatingItemStateImplCopyWith(
+          _$CartUpdatingItemStateImpl value,
+          $Res Function(_$CartUpdatingItemStateImpl) then) =
+      __$$CartUpdatingItemStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CartUpdatingItemStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartUpdatingItemStateImpl>
+    implements _$$CartUpdatingItemStateImplCopyWith<$Res> {
+  __$$CartUpdatingItemStateImplCopyWithImpl(_$CartUpdatingItemStateImpl _value,
+      $Res Function(_$CartUpdatingItemStateImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CartUpdatingItemStateImpl implements CartUpdatingItemState {
+  const _$CartUpdatingItemStateImpl();
+
+  @override
+  String toString() {
+    return 'CartState.updatingItem()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CartUpdatingItemStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<CartItem> cartItems) loadSuccess,
+    required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
+    required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
+    required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
+    required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
+    required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
+  }) {
+    return updatingItem();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<CartItem> cartItems)? loadSuccess,
+    TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
+    TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
+    TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
+    TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
+    TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
+  }) {
+    return updatingItem?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<CartItem> cartItems)? loadSuccess,
+    TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
+    TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
+    TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
+    TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
+    TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (updatingItem != null) {
+      return updatingItem();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CartIdleState value) initial,
+    required TResult Function(CartLoadingState value) loading,
+    required TResult Function(CartLoadSuccessState value) loadSuccess,
+    required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
+    required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
+    required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
+    required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
+    required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
+  }) {
+    return updatingItem(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CartIdleState value)? initial,
+    TResult? Function(CartLoadingState value)? loading,
+    TResult? Function(CartLoadSuccessState value)? loadSuccess,
+    TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
+    TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
+    TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
+    TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
+    TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
+  }) {
+    return updatingItem?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CartIdleState value)? initial,
+    TResult Function(CartLoadingState value)? loading,
+    TResult Function(CartLoadSuccessState value)? loadSuccess,
+    TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
+    TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
+    TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
+    TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
+    TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (updatingItem != null) {
+      return updatingItem(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CartUpdatingItemState implements CartState {
+  const factory CartUpdatingItemState() = _$CartUpdatingItemStateImpl;
 }
 
 /// @nodoc
@@ -1144,14 +2484,22 @@ class _$CartItemUpdatedStateImpl implements CartItemUpdatedState {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() idle,
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<CartItem> cartItems) loadSuccess,
     required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
     required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
     required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
     required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
     required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
   }) {
     return itemUpdated(itemId);
   }
@@ -1159,14 +2507,22 @@ class _$CartItemUpdatedStateImpl implements CartItemUpdatedState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? idle,
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<CartItem> cartItems)? loadSuccess,
     TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
     TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
     TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
     TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
     TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
   }) {
     return itemUpdated?.call(itemId);
   }
@@ -1174,14 +2530,22 @@ class _$CartItemUpdatedStateImpl implements CartItemUpdatedState {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? idle,
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<CartItem> cartItems)? loadSuccess,
     TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
     TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
     TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
     TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
     TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
     required TResult orElse(),
   }) {
     if (itemUpdated != null) {
@@ -1193,14 +2557,22 @@ class _$CartItemUpdatedStateImpl implements CartItemUpdatedState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CartIdleState value) idle,
+    required TResult Function(CartIdleState value) initial,
     required TResult Function(CartLoadingState value) loading,
     required TResult Function(CartLoadSuccessState value) loadSuccess,
     required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
     required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
     required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
     required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
     required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
   }) {
     return itemUpdated(this);
   }
@@ -1208,14 +2580,22 @@ class _$CartItemUpdatedStateImpl implements CartItemUpdatedState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CartIdleState value)? idle,
+    TResult? Function(CartIdleState value)? initial,
     TResult? Function(CartLoadingState value)? loading,
     TResult? Function(CartLoadSuccessState value)? loadSuccess,
     TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
     TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
     TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
     TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
     TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
   }) {
     return itemUpdated?.call(this);
   }
@@ -1223,14 +2603,22 @@ class _$CartItemUpdatedStateImpl implements CartItemUpdatedState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CartIdleState value)? idle,
+    TResult Function(CartIdleState value)? initial,
     TResult Function(CartLoadingState value)? loading,
     TResult Function(CartLoadSuccessState value)? loadSuccess,
     TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
     TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
     TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
     TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
     TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
     required TResult orElse(),
   }) {
     if (itemUpdated != null) {
@@ -1248,6 +2636,413 @@ abstract class CartItemUpdatedState implements CartState {
   @JsonKey(ignore: true)
   _$$CartItemUpdatedStateImplCopyWith<_$CartItemUpdatedStateImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CartItemUpdateErrorStateImplCopyWith<$Res> {
+  factory _$$CartItemUpdateErrorStateImplCopyWith(
+          _$CartItemUpdateErrorStateImpl value,
+          $Res Function(_$CartItemUpdateErrorStateImpl) then) =
+      __$$CartItemUpdateErrorStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$CartItemUpdateErrorStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartItemUpdateErrorStateImpl>
+    implements _$$CartItemUpdateErrorStateImplCopyWith<$Res> {
+  __$$CartItemUpdateErrorStateImplCopyWithImpl(
+      _$CartItemUpdateErrorStateImpl _value,
+      $Res Function(_$CartItemUpdateErrorStateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$CartItemUpdateErrorStateImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CartItemUpdateErrorStateImpl implements CartItemUpdateErrorState {
+  const _$CartItemUpdateErrorStateImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CartState.itemUpdateError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CartItemUpdateErrorStateImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CartItemUpdateErrorStateImplCopyWith<_$CartItemUpdateErrorStateImpl>
+      get copyWith => __$$CartItemUpdateErrorStateImplCopyWithImpl<
+          _$CartItemUpdateErrorStateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<CartItem> cartItems) loadSuccess,
+    required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
+    required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
+    required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
+    required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
+    required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
+  }) {
+    return itemUpdateError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<CartItem> cartItems)? loadSuccess,
+    TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
+    TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
+    TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
+    TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
+    TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
+  }) {
+    return itemUpdateError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<CartItem> cartItems)? loadSuccess,
+    TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
+    TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
+    TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
+    TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
+    TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (itemUpdateError != null) {
+      return itemUpdateError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CartIdleState value) initial,
+    required TResult Function(CartLoadingState value) loading,
+    required TResult Function(CartLoadSuccessState value) loadSuccess,
+    required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
+    required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
+    required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
+    required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
+    required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
+  }) {
+    return itemUpdateError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CartIdleState value)? initial,
+    TResult? Function(CartLoadingState value)? loading,
+    TResult? Function(CartLoadSuccessState value)? loadSuccess,
+    TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
+    TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
+    TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
+    TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
+    TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
+  }) {
+    return itemUpdateError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CartIdleState value)? initial,
+    TResult Function(CartLoadingState value)? loading,
+    TResult Function(CartLoadSuccessState value)? loadSuccess,
+    TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
+    TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
+    TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
+    TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
+    TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (itemUpdateError != null) {
+      return itemUpdateError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CartItemUpdateErrorState implements CartState {
+  const factory CartItemUpdateErrorState(final String message) =
+      _$CartItemUpdateErrorStateImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$CartItemUpdateErrorStateImplCopyWith<_$CartItemUpdateErrorStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CartClearingStateImplCopyWith<$Res> {
+  factory _$$CartClearingStateImplCopyWith(_$CartClearingStateImpl value,
+          $Res Function(_$CartClearingStateImpl) then) =
+      __$$CartClearingStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CartClearingStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartClearingStateImpl>
+    implements _$$CartClearingStateImplCopyWith<$Res> {
+  __$$CartClearingStateImplCopyWithImpl(_$CartClearingStateImpl _value,
+      $Res Function(_$CartClearingStateImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CartClearingStateImpl implements CartClearingState {
+  const _$CartClearingStateImpl();
+
+  @override
+  String toString() {
+    return 'CartState.clearingCart()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CartClearingStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<CartItem> cartItems) loadSuccess,
+    required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
+    required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
+    required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
+    required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
+    required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
+  }) {
+    return clearingCart();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<CartItem> cartItems)? loadSuccess,
+    TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
+    TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
+    TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
+    TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
+    TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
+  }) {
+    return clearingCart?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<CartItem> cartItems)? loadSuccess,
+    TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
+    TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
+    TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
+    TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
+    TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (clearingCart != null) {
+      return clearingCart();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CartIdleState value) initial,
+    required TResult Function(CartLoadingState value) loading,
+    required TResult Function(CartLoadSuccessState value) loadSuccess,
+    required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
+    required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
+    required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
+    required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
+    required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
+  }) {
+    return clearingCart(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CartIdleState value)? initial,
+    TResult? Function(CartLoadingState value)? loading,
+    TResult? Function(CartLoadSuccessState value)? loadSuccess,
+    TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
+    TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
+    TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
+    TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
+    TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
+  }) {
+    return clearingCart?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CartIdleState value)? initial,
+    TResult Function(CartLoadingState value)? loading,
+    TResult Function(CartLoadSuccessState value)? loadSuccess,
+    TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
+    TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
+    TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
+    TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
+    TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (clearingCart != null) {
+      return clearingCart(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CartClearingState implements CartState {
+  const factory CartClearingState() = _$CartClearingStateImpl;
 }
 
 /// @nodoc
@@ -1288,14 +3083,22 @@ class _$CartClearedStateImpl implements CartClearedState {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() idle,
+    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<CartItem> cartItems) loadSuccess,
     required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
     required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
     required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
     required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
     required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
   }) {
     return cartCleared();
   }
@@ -1303,14 +3106,22 @@ class _$CartClearedStateImpl implements CartClearedState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? idle,
+    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<CartItem> cartItems)? loadSuccess,
     TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
     TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
     TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
     TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
     TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
   }) {
     return cartCleared?.call();
   }
@@ -1318,14 +3129,22 @@ class _$CartClearedStateImpl implements CartClearedState {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? idle,
+    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<CartItem> cartItems)? loadSuccess,
     TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
     TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
     TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
     TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
     TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
     required TResult orElse(),
   }) {
     if (cartCleared != null) {
@@ -1337,14 +3156,22 @@ class _$CartClearedStateImpl implements CartClearedState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CartIdleState value) idle,
+    required TResult Function(CartIdleState value) initial,
     required TResult Function(CartLoadingState value) loading,
     required TResult Function(CartLoadSuccessState value) loadSuccess,
     required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
     required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
     required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
     required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
     required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
   }) {
     return cartCleared(this);
   }
@@ -1352,14 +3179,22 @@ class _$CartClearedStateImpl implements CartClearedState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CartIdleState value)? idle,
+    TResult? Function(CartIdleState value)? initial,
     TResult? Function(CartLoadingState value)? loading,
     TResult? Function(CartLoadSuccessState value)? loadSuccess,
     TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
     TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
     TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
     TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
     TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
   }) {
     return cartCleared?.call(this);
   }
@@ -1367,14 +3202,22 @@ class _$CartClearedStateImpl implements CartClearedState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CartIdleState value)? idle,
+    TResult Function(CartIdleState value)? initial,
     TResult Function(CartLoadingState value)? loading,
     TResult Function(CartLoadSuccessState value)? loadSuccess,
     TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
     TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
     TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
     TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
     TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
     required TResult orElse(),
   }) {
     if (cartCleared != null) {
@@ -1386,4 +3229,223 @@ class _$CartClearedStateImpl implements CartClearedState {
 
 abstract class CartClearedState implements CartState {
   const factory CartClearedState() = _$CartClearedStateImpl;
+}
+
+/// @nodoc
+abstract class _$$CartClearErrorStateImplCopyWith<$Res> {
+  factory _$$CartClearErrorStateImplCopyWith(_$CartClearErrorStateImpl value,
+          $Res Function(_$CartClearErrorStateImpl) then) =
+      __$$CartClearErrorStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$CartClearErrorStateImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$CartClearErrorStateImpl>
+    implements _$$CartClearErrorStateImplCopyWith<$Res> {
+  __$$CartClearErrorStateImplCopyWithImpl(_$CartClearErrorStateImpl _value,
+      $Res Function(_$CartClearErrorStateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$CartClearErrorStateImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CartClearErrorStateImpl implements CartClearErrorState {
+  const _$CartClearErrorStateImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CartState.cartClearError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CartClearErrorStateImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CartClearErrorStateImplCopyWith<_$CartClearErrorStateImpl> get copyWith =>
+      __$$CartClearErrorStateImplCopyWithImpl<_$CartClearErrorStateImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<CartItem> cartItems) loadSuccess,
+    required TResult Function(String message) loadError,
+    required TResult Function() addingItem,
+    required TResult Function(int itemId) itemAdded,
+    required TResult Function(String message) itemAddError,
+    required TResult Function() removingItem,
+    required TResult Function(int itemId) itemRemoved,
+    required TResult Function(String message) itemRemoveError,
+    required TResult Function() updatingItem,
+    required TResult Function(int itemId) itemUpdated,
+    required TResult Function(String message) itemUpdateError,
+    required TResult Function() clearingCart,
+    required TResult Function() cartCleared,
+    required TResult Function(String message) cartClearError,
+  }) {
+    return cartClearError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<CartItem> cartItems)? loadSuccess,
+    TResult? Function(String message)? loadError,
+    TResult? Function()? addingItem,
+    TResult? Function(int itemId)? itemAdded,
+    TResult? Function(String message)? itemAddError,
+    TResult? Function()? removingItem,
+    TResult? Function(int itemId)? itemRemoved,
+    TResult? Function(String message)? itemRemoveError,
+    TResult? Function()? updatingItem,
+    TResult? Function(int itemId)? itemUpdated,
+    TResult? Function(String message)? itemUpdateError,
+    TResult? Function()? clearingCart,
+    TResult? Function()? cartCleared,
+    TResult? Function(String message)? cartClearError,
+  }) {
+    return cartClearError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<CartItem> cartItems)? loadSuccess,
+    TResult Function(String message)? loadError,
+    TResult Function()? addingItem,
+    TResult Function(int itemId)? itemAdded,
+    TResult Function(String message)? itemAddError,
+    TResult Function()? removingItem,
+    TResult Function(int itemId)? itemRemoved,
+    TResult Function(String message)? itemRemoveError,
+    TResult Function()? updatingItem,
+    TResult Function(int itemId)? itemUpdated,
+    TResult Function(String message)? itemUpdateError,
+    TResult Function()? clearingCart,
+    TResult Function()? cartCleared,
+    TResult Function(String message)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (cartClearError != null) {
+      return cartClearError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CartIdleState value) initial,
+    required TResult Function(CartLoadingState value) loading,
+    required TResult Function(CartLoadSuccessState value) loadSuccess,
+    required TResult Function(CartLoadErrorState value) loadError,
+    required TResult Function(CartAddingItemState value) addingItem,
+    required TResult Function(CartItemAddedState value) itemAdded,
+    required TResult Function(CartItemAddErrorState value) itemAddError,
+    required TResult Function(CartRemovingItemState value) removingItem,
+    required TResult Function(CartItemRemovedState value) itemRemoved,
+    required TResult Function(CartItemRemoveErrorState value) itemRemoveError,
+    required TResult Function(CartUpdatingItemState value) updatingItem,
+    required TResult Function(CartItemUpdatedState value) itemUpdated,
+    required TResult Function(CartItemUpdateErrorState value) itemUpdateError,
+    required TResult Function(CartClearingState value) clearingCart,
+    required TResult Function(CartClearedState value) cartCleared,
+    required TResult Function(CartClearErrorState value) cartClearError,
+  }) {
+    return cartClearError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CartIdleState value)? initial,
+    TResult? Function(CartLoadingState value)? loading,
+    TResult? Function(CartLoadSuccessState value)? loadSuccess,
+    TResult? Function(CartLoadErrorState value)? loadError,
+    TResult? Function(CartAddingItemState value)? addingItem,
+    TResult? Function(CartItemAddedState value)? itemAdded,
+    TResult? Function(CartItemAddErrorState value)? itemAddError,
+    TResult? Function(CartRemovingItemState value)? removingItem,
+    TResult? Function(CartItemRemovedState value)? itemRemoved,
+    TResult? Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult? Function(CartUpdatingItemState value)? updatingItem,
+    TResult? Function(CartItemUpdatedState value)? itemUpdated,
+    TResult? Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult? Function(CartClearingState value)? clearingCart,
+    TResult? Function(CartClearedState value)? cartCleared,
+    TResult? Function(CartClearErrorState value)? cartClearError,
+  }) {
+    return cartClearError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CartIdleState value)? initial,
+    TResult Function(CartLoadingState value)? loading,
+    TResult Function(CartLoadSuccessState value)? loadSuccess,
+    TResult Function(CartLoadErrorState value)? loadError,
+    TResult Function(CartAddingItemState value)? addingItem,
+    TResult Function(CartItemAddedState value)? itemAdded,
+    TResult Function(CartItemAddErrorState value)? itemAddError,
+    TResult Function(CartRemovingItemState value)? removingItem,
+    TResult Function(CartItemRemovedState value)? itemRemoved,
+    TResult Function(CartItemRemoveErrorState value)? itemRemoveError,
+    TResult Function(CartUpdatingItemState value)? updatingItem,
+    TResult Function(CartItemUpdatedState value)? itemUpdated,
+    TResult Function(CartItemUpdateErrorState value)? itemUpdateError,
+    TResult Function(CartClearingState value)? clearingCart,
+    TResult Function(CartClearedState value)? cartCleared,
+    TResult Function(CartClearErrorState value)? cartClearError,
+    required TResult orElse(),
+  }) {
+    if (cartClearError != null) {
+      return cartClearError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CartClearErrorState implements CartState {
+  const factory CartClearErrorState(final String message) =
+      _$CartClearErrorStateImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$CartClearErrorStateImplCopyWith<_$CartClearErrorStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
