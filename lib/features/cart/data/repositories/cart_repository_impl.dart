@@ -11,7 +11,17 @@ class CartRepositoryImpl implements CartRepository {
 
   @override
   Future<void> addItemToCart(CartItem item) async {
-    _cartItems.add(item);
+    final index = _cartItems.indexWhere((cartItem) => cartItem.id == item.id);
+    if (index != -1) {
+      // Item exists, update the quantity
+      final existingItem = _cartItems[index];
+      final updatedItem = existingItem.copyWith(
+          quantity: existingItem.quantity + item.quantity);
+      _cartItems[index] = updatedItem;
+    } else {
+      // Item does not exist, add it to the cart
+      _cartItems.add(item);
+    }
   }
 
   @override

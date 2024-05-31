@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../domain/models/cart_item_model.dart';
 import '../../providers/provider.dart';
+import '../../widgets/cart_item.dart';
 
 class CartPageBody extends ConsumerWidget {
   const CartPageBody({super.key});
@@ -30,20 +31,7 @@ Widget _buildCartItems(List<CartItem> cartItems, WidgetRef ref) {
     itemCount: cartItems.length,
     itemBuilder: (context, index) {
       final item = cartItems[index];
-      return ListTile(
-        leading:
-            Image.asset(item.image, width: 50, height: 50, fit: BoxFit.cover),
-        title: Text(item.title),
-        subtitle: Text(
-          'Quantity: ${item.quantity}\nPrice: \$${item.price.toStringAsFixed(2)}',
-        ),
-        trailing: IconButton(
-          icon: const Icon(Icons.remove_shopping_cart),
-          onPressed: () => ref
-              .read(cartControllerProvider.notifier)
-              .removeItemFromCart(item.id),
-        ),
-      );
+      return CartItemWidget(item: item, ref: ref);
     },
   );
 }
