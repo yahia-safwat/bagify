@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../common/widgets/error_widget.dart';
 import '../../../../common/widgets/loading_widget.dart';
 import '../../../product/presentation/providers/providers.dart';
-import '../../../product/presentation/widgets/product_list.dart';
+import '../../../product/presentation/widgets/product_grid.dart';
 
 class HomePageBody extends ConsumerWidget {
   const HomePageBody({super.key});
@@ -16,7 +16,8 @@ class HomePageBody extends ConsumerWidget {
     return productsAsync.when(
       loading: () => const LoadingWidget(),
       error: (err, stack) => ErrWidget(error: err),
-      data: (products) => ProductList(products: products),
+      data: (products) => ProductGrid(products: products),
+      // data: (products) => ProductList(products: products),
     );
   }
 }

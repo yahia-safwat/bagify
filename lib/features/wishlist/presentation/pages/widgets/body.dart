@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../product/domain/models/product_model.dart';
-import '../../../../product/presentation/widgets/product_list_item.dart';
+import '../../widgets/wishlist_item.dart';
 
 class WishlistPageBody extends StatelessWidget {
   const WishlistPageBody({super.key, required this.wishlist});
@@ -14,7 +14,7 @@ class WishlistPageBody extends StatelessWidget {
       itemCount: wishlist.length,
       itemBuilder: (context, index) {
         final product = wishlist[index];
-        return ProductListItem(product: product);
+        return WishlistItem(product: product);
       },
     );
   }
